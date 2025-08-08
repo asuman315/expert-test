@@ -1,5 +1,7 @@
 Repo: https://github.com/asuman315/expert-test
 
+Project Info Url: 
+
 ## Overview
 This document outlines the major bugs that were discovered and resolved in the Scheduling App
 
@@ -44,4 +46,16 @@ Add a loading state to the button `Get Early Access` after I click the button
 
 
 
+```
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
 
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
+
+# Step 3: Install the necessary dependencies.
+npm i
+
+# Step 4: Start the development server with auto-reloading and an instant preview.
+npm run dev
+```
