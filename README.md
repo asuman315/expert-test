@@ -1,73 +1,41 @@
-# Welcome to your Lovable project
+## Overview
+This document outlines the major bugs that were discovered and resolved in the Scheduling App
 
-## Project info
+## Critical Fixes Implemented
+**Error** : `Error sending confirmation email: FunctionsFetchError: Failed to send a request to the Edge Function`
+**Severity**: Critical
+**Status**: Fixed
 
-**URL**: https://lovable.dev/projects/94b52f1d-10a5-4e88-9a9c-5c12cf45d83a
+#### Problem
+I think we lacked the Resend API Key - `RESEND_PUBLIC_KEY`
 
-## How can I edit this code?
+#### Fix
+Created a supabase and Resend account which I connected to the project.
 
-There are several ways of editing your application.
 
-**Use Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/94b52f1d-10a5-4e88-9a9c-5c12cf45d83a) and start prompting.
+**Error** : `Error generating personalized content: TypeError: Cannot read properties of undefined (reading '0')\n    at generatePersonalizedContent`
+**Severity**: Critical
+**Status**: Fixed
 
-Changes made via Lovable will be committed automatically to this repo.
 
-**Use your preferred IDE**
+#### Problem
+We lacked the OPEN AI API Key - `OPENAI_API_KEY`
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+#### Fix
+Created a supabase and Resend account which I connected to the project.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+**Error** : `The was a bad user experience on clicking of the Get Early Access button`
+**Severity**: Moderate
+**Status**: Fixed
 
-Follow these steps:
+### Problem
+There was no loading state on the `Get Early Access` button so user would not know whether they clicked on the button or not
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Fix
+Add a loading state to the button `Get Early Access` after I click the button 
+ 
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/94b52f1d-10a5-4e88-9a9c-5c12cf45d83a) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
